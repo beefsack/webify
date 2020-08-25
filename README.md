@@ -2,6 +2,10 @@
 
 script-httpd is a simple tool to turn a command line script into a web service.
 
+<p align="center">
+  <img src="https://i.imgur.com/1wL9m5C.gif">
+</p>
+
 script-httpd invokes your script and writes the request body to your process'
 stdin. Stdout is then passed back to the client as the HTTP response body.
 
