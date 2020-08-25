@@ -25,6 +25,35 @@ $ curl -d 'This is a really long sentence' http://localhost:8080
 30
 ```
 
+### Official Docker image
+
+The official Docker image is [beefsack/script-httpd](https://hub.docker.com/r/beefsack/script-httpd).
+
+It can be configured using the following environment variables:
+
+* `SCRIPT_HTTPD_ADDR` - the address to listen on inside the container, defaults to `:8080`
+* `SCRIPT_HTTPD_CMD` - the command to execute, defaults to `/script`
+
+#### Mounting script and running official image
+
+```
+$ docker run -it --rm -p 8080:8080 -v /path/to/my/script:/script beefsack/script-httpd:latest
+2020/08/25 04:27:46 listening on :8080, proxying to /script
+
+...
+
+$ curl -d 'Some data' http://localhost:8080
+```
+
+#### Building a new image using official image as base
+
+Create a `Dockerfile` like the following:
+
+```
+FROM beefsack/script-httpd:latest
+COPY myscript /script
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
