@@ -31,14 +31,14 @@ The official Docker image is [beefsack/script-httpd](https://hub.docker.com/r/be
 
 It can be configured using the following environment variables:
 
-* `SCRIPT_HTTPD_ADDR` - the address to listen on inside the container, defaults to `:8080`
+* `SCRIPT_HTTPD_ADDR` - the address to listen on inside the container, defaults to `:80`
 * `SCRIPT_HTTPD_CMD` - the command to execute, defaults to `/script`
 
 #### Mounting script and running official image
 
 ```
-$ docker run -it --rm -p 8080:8080 -v /path/to/my/script:/script beefsack/script-httpd:latest
-2020/08/25 04:27:46 listening on :8080, proxying to /script
+$ docker run -it --rm -p 8080:80 -v /path/to/my/script:/script beefsack/script-httpd:latest
+2020/08/25 04:27:46 listening on :80, proxying to /script
 
 ...
 
