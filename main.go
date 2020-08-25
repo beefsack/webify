@@ -79,7 +79,7 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		if len(stderr) > 0 {
-			log.Println(stderr)
+			log.Print(string(stderr))
 		}
 	}()
 
