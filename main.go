@@ -98,6 +98,10 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		}
 	}()
 
+	// We must consume stdout and stderr before `cmd.Wait()` as per
+	// doc and example at https://golang.org/pkg/os/exec/#Cmd.StdoutPipe
+	wg.Wait()
+
 	// Wait for the subprocess to complete
 	cmdErr := cmd.Wait()
 	if cmdErr != nil {
@@ -106,9 +110,6 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		log.Printf("error running subprocess: %v", err)
 		respError(w)
 	}
-	// Also wait for all of our goroutines to finish, in case there was
-	// buffering
-	wg.Wait()
 
 	// Write stdout as the response body
 	_, err = w.Write(stdout)
