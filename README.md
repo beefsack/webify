@@ -3,7 +3,7 @@
 webify is a simple tool to turn a command line script into a web service.
 
 <p align="center">
-  <img src="https://i.imgur.com/gAPwyDL.gif">
+  <img src="https://i.imgur.com/PPdE4Nw.gif">
 </p>
 
 webify is essentially a very basic CGI server which forwards all requests
