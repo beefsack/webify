@@ -1,15 +1,15 @@
 FROM golang:1.14
 
-WORKDIR /go/src/script-httpd
+WORKDIR /go/src/webify
 
 COPY . .
 RUN go get && go build
 
-# By default, script-httpd listens on all interfaces on port 8080
+# By default, webify listens on all interfaces on port 8080
 EXPOSE 80
 ENV ADDR :80
 
-# By default, script-httpd executes /script
+# By default, webify executes /script
 ENV SCRIPT /script
 
-CMD ["./script-httpd"]
+CMD ["./webify"]

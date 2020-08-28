@@ -1,16 +1,16 @@
 package main
 
 import (
+	"github.com/beefsack/webify/lib"
+
 	"log"
 	"net/http"
 	"strings"
-
-	"github.com/beefsack/script-httpd/scripthttpd"
 )
 
 func main() {
-	opts := scripthttpd.ParseConfig()
+	opts := lib.ParseConfig()
 
 	log.Printf("listening on %s, proxying to %s", opts.Addr, strings.Join(opts.Script, " "))
-	log.Fatal(http.ListenAndServe(opts.Addr, &scripthttpd.Server{Opts: opts}))
+	log.Fatal(http.ListenAndServe(opts.Addr, &lib.Server{Opts: opts}))
 }

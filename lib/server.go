@@ -1,4 +1,4 @@
-package scripthttpd
+package lib
 
 import (
 	"io"

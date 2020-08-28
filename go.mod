@@ -1,4 +1,4 @@
-module github.com/beefsack/script-httpd
+module github.com/beefsack/webify
 
 go 1.15
 

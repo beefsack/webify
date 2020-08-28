@@ -1,4 +1,4 @@
-package scripthttpd
+package lib
 
 import (
 	"fmt"
@@ -13,16 +13,16 @@ import (
 const EnvScript = "SCRIPT"
 
 const helpHeader = `
-script-httpd is a simple helper to turn a command line script into an HTTP
+webify is a simple helper to turn a command line script into an HTTP
 service.
 
-Homepage: http://github.com/beefsack/script-httpd
+Homepage: http://github.com/beefsack/webify
 
-script-httpd functions by starting the script for each request and piping the
+webify functions by starting the script for each request and piping the
 HTTP request body into stdin of the subprocess. stdout is captured and returned
 as the body of the HTTP response.
 
-stderr is not sent to the client, but is logged to the script-httpd process
+stderr is not sent to the client, but is logged to the webify process
 stderr. stderr can be sent to the client using redirection if required.
 
 The exit status of the script determines the HTTP status code for the response:
@@ -31,11 +31,11 @@ isn't sent until the script completes.
 
 Example server that responds with the number of lines in the request body:
 
-  script-httpd wc -l
+  webify wc -l
 
 Piping and redirection are supported by calling a shell directly:
 
-  script-httpd bash -c 'date && wc -l'
+  webify bash -c 'date && wc -l'
 
 All options are also exposed as environment variables, entirely in uppercase.
 Eg. -addr can also be specified using the environment variable ADDR. The script
