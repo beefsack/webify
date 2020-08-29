@@ -4,6 +4,7 @@
 <p align="center">
   <a href="https://github.com/beefsack/webify/actions"><img src="https://github.com/beefsack/webify/workflows/build/badge.svg" alt="Build Status"></a>
   <a href="https://goreportcard.com/report/github.com/beefsack/webify"><img src="https://goreportcard.com/badge/github.com/beefsack/webify" alt="Go Report Card"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License"></a>
 </p>
 <p align="center"><img src="https://i.imgur.com/PPdE4Nw.gif"></p>
 
