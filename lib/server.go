@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os/exec"
 	"sync"
+	"syscall"
 )
 
 // Server is a simple proxy server to pipe HTTP requests to a subprocess' stdin
@@ -111,7 +112,8 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	// Write stdout as the response body
 	_, err = w.Write(stdout)
-	if err != nil {
+	// We ignore connection close errors, which appears as `syscall.EPIPE`
+	if err != nil && err != syscall.EPIPE {
 		log.Printf("error writing response body: %v", err)
 	}
 }
