@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2020-08-29
+## Added
+- Include LICENSE and README.md in build archives.
+
 ## [1.3.0] - 2020-08-27
 ### Changed
 - Renamed project to webify.
