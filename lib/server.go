@@ -9,8 +9,8 @@ import (
 	"sync"
 )
 
-/// Server is a simple proxy server to pipe HTTP requests to a subprocess' stdin
-/// and the subprocess' stdout to the HTTP response.
+// Server is a simple proxy server to pipe HTTP requests to a subprocess' stdin
+// and the subprocess' stdout to the HTTP response.
 type Server struct {
 	Opts
 }

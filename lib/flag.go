@@ -6,10 +6,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/mattn/go-shellwords"
+	shellwords "github.com/mattn/go-shellwords"
 	"github.com/namsral/flag"
 )
 
+// EnvScript is the name of the environment variable to configure the script to
+// execute.
 const EnvScript = "SCRIPT"
 
 const helpHeader = `
@@ -44,6 +46,7 @@ arguments can be passed in the SCRIPT environment variable instead.
 Available options:
 `
 
+// Opts are the options parsed from the command line and environment variable.
 type Opts struct {
 	Script []string
 	Addr   string
@@ -56,6 +59,7 @@ func init() {
 	}
 }
 
+// ParseConfig parses options from arguments and environment variables.
 func ParseConfig() Opts {
 	opts := Opts{}
 
