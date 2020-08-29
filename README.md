@@ -1,13 +1,13 @@
-# webify
-
-webify is a simple tool to turn a command line script into a web service.
-
+<p align="center"><img src="https://i.imgur.com/vnoL8LZ.png"></p>
+<h1 align="center">Webify</h1>
+<p align="center"><b>Turn shell commands into web services</b></p>
 <p align="center">
-  <img src="https://i.imgur.com/PPdE4Nw.gif">
+  <img src="https://github.com/beefsack/webify/workflows/build/badge.svg" alt="Build Status">
 </p>
+<p align="center"><img src="https://i.imgur.com/PPdE4Nw.gif"></p>
 
-webify is essentially a very basic CGI server which forwards all requests
-to a single script. A design goal is to be as close to zero-config as possible.
+webify is a very basic CGI server which forwards all requests to a single
+script. A design goal is to be as zero-config as possible.
 
 webify invokes your script and writes the request body to your process'
 stdin. Stdout is then passed back to the client as the HTTP response body.
