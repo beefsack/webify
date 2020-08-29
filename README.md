@@ -2,7 +2,8 @@
 <h1 align="center">Webify</h1>
 <p align="center"><b>Turn shell commands into web services</b></p>
 <p align="center">
-  <img src="https://github.com/beefsack/webify/workflows/build/badge.svg" alt="Build Status">
+  <a href="https://github.com/beefsack/webify/actions"><img src="https://github.com/beefsack/webify/workflows/build/badge.svg" alt="Build Status"></a>
+  <a href="https://goreportcard.com/report/github.com/beefsack/webify"><img src="https://goreportcard.com/badge/github.com/beefsack/webify" alt="Go Report Card"></a>
 </p>
 <p align="center"><img src="https://i.imgur.com/PPdE4Nw.gif"></p>
 
