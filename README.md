@@ -6,7 +6,7 @@
   <a href="https://goreportcard.com/report/github.com/beefsack/webify"><img src="https://goreportcard.com/badge/github.com/beefsack/webify" alt="Go Report Card"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License"></a>
 </p>
-<p align="center"><img src="https://i.imgur.com/PPdE4Nw.gif"></p>
+<p align="center"><img src="https://i.imgur.com/OipBB3v.gif"></p>
 
 webify is a very basic CGI server which forwards all requests to a single
 script. A design goal is to be as zero-config as possible.
