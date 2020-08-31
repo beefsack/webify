@@ -1,5 +1,5 @@
-<p align="center"><img src="https://i.imgur.com/vnoL8LZ.png"></p>
-<h1 align="center">Webify</h1>
+<p align="center"><img src="https://i.imgur.com/I2HvDxv.png"></p>
+<h1 align="center">webify</h1>
 <p align="center"><b>Turn shell commands into web services</b></p>
 <p align="center">
   <a href="https://github.com/beefsack/webify/actions"><img src="https://github.com/beefsack/webify/workflows/build/badge.svg" alt="Build Status"></a>
