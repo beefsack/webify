@@ -1,6 +1,6 @@
 <p align="center"><img src="https://i.imgur.com/I2HvDxv.png"></p>
 <h1 align="center">webify</h1>
-<p align="center"><b>Turn shell commands into web services</b></p>
+<p align="center"><b>Turn functions and commands into web services</b></p>
 <p align="center">
   <a href="https://github.com/beefsack/webify/actions"><img src="https://github.com/beefsack/webify/workflows/build/badge.svg" alt="Build Status"></a>
   <a href="https://goreportcard.com/report/github.com/beefsack/webify"><img src="https://goreportcard.com/badge/github.com/beefsack/webify" alt="Go Report Card"></a>
@@ -8,10 +8,15 @@
 </p>
 <p align="center"><img src="https://i.imgur.com/OipBB3v.gif"></p>
 
-webify is a very basic CGI server which forwards all requests to a single
+For a real world example, see [turning a Python function into a web
+service](examples/python-function).
+
+## Overview
+
+`webify` is a very basic CGI server which forwards all requests to a single
 script. A design goal is to be as zero-config as possible.
 
-webify invokes your script and writes the request body to your process'
+`webify` invokes your script and writes the request body to your process'
 stdin. Stdout is then passed back to the client as the HTTP response body.
 
 If your script returns a non-zero exit code, the HTTP response status code will
@@ -19,7 +24,7 @@ be 500.
 
 ## Installation
 
-webify is available from the [project's releases page](https://github.com/beefsack/webify/releases).
+`webify` is available from the [project's releases page](https://github.com/beefsack/webify/releases).
 
 ## Usage
 
