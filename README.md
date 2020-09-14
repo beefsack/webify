@@ -26,6 +26,12 @@ be 500.
 
 `webify` is available from the [project's releases page](https://github.com/beefsack/webify/releases).
 
+On macOS, it can also be installed via [MacPorts](https://ports.macports.org/port/py-boltons/summary):
+
+```bash
+sudo port install webify
+```
+
 ## Usage
 
 ```bash
